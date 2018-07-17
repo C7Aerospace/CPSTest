@@ -45,13 +45,13 @@
             this.sign.Name = "sign";
             this.sign.Size = new System.Drawing.Size(272, 17);
             this.sign.TabIndex = 0;
-            this.sign.Text = "Click Per Second Test Program  ver 0.1 by C7";
+            this.sign.Text = "Click Per Second Test Program  ver 0.2 by C7";
             // 
             // cpsDisplay
             // 
             this.cpsDisplay.AutoSize = true;
             this.cpsDisplay.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cpsDisplay.ForeColor = System.Drawing.Color.Red;
+            this.cpsDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.cpsDisplay.Location = new System.Drawing.Point(0, 17);
             this.cpsDisplay.Margin = new System.Windows.Forms.Padding(0);
             this.cpsDisplay.Name = "cpsDisplay";
@@ -74,7 +74,7 @@
             // clickButton
             // 
             this.clickButton.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.clickButton.ForeColor = System.Drawing.Color.Red;
+            this.clickButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.clickButton.Location = new System.Drawing.Point(12, 38);
             this.clickButton.Name = "clickButton";
             this.clickButton.Size = new System.Drawing.Size(260, 116);
@@ -103,6 +103,8 @@
             this.Controls.Add(this.clickButton);
             this.Controls.Add(this.cpsDisplay);
             this.Controls.Add(this.sign);
+            this.MaximumSize = new System.Drawing.Size(300, 200);
+            this.MinimumSize = new System.Drawing.Size(300, 200);
             this.Name = "main";
             this.Text = "CPSTest";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.main_FormClosing);

@@ -13,6 +13,7 @@ namespace CPSTest
     {
         public List<DateTime> clickTime = new List<DateTime>();
         Thread thread1;
+        Chart chart = new Chart();
         public main()
         {
             InitializeComponent();
@@ -27,27 +28,38 @@ namespace CPSTest
         }
         private void showCPSInfo()
         {
-            long[] distanceTimeArray = new long[clickTime.Count-1];
-            double[] CPSData = new Double[clickTime.Count-1];
-            
-            for (int i = 1; i < clickTime.Count; i++)
+            clickTime.Add(DateTime.Now);
+            if (clickTime.Count > 1)
             {
-                distanceTimeArray[i-1] = clickTime[i].ToBinary()-clickTime[i-1].ToBinary();
+                long[] distanceTimeArray = new long[clickTime.Count - 1];
+                double[] CPSData = new Double[clickTime.Count - 1];
+
+                for (int i = 1; i < clickTime.Count; i++)
+                {
+                    distanceTimeArray[i - 1] = clickTime[i].ToBinary() - clickTime[i - 1].ToBinary();
+                }
+                for (int i = 0; i < distanceTimeArray.Length; i++)
+                {
+                    CPSData[i] = 10000000d / distanceTimeArray[i];
+                }
+                double max = CPSData[0], min = CPSData[0];
+                for (int i = 0; i < CPSData.Length; i++)
+                {
+                    if (i < CPSData.Length - 1)
+                    {
+                        if (CPSData[i] > max)
+                            max = CPSData[i];
+                    }
+                    if (CPSData[i] < min)
+                        min = CPSData[i];
+                }
+
+                double avg = (double)clickTime.Count / 10d;
+                cpsDisplay.Text = String.Format("CPSInfo: Avg.:{0} Peak:{1} Valley:{2}", avg.ToString("00.0"), max.ToString("00.000"), min.ToString("00.000"));
+                chart.clear();
+                chart.setArray(CPSData);
+                chart.draw();
             }
-            for (int i = 0; i < distanceTimeArray.Length; i++)
-            {
-                CPSData[i] = 10000000d / distanceTimeArray[i];
-            }
-            double max = CPSData[0], min = CPSData[0];
-            for (int i = 0; i < CPSData.Length; i++)
-            {
-                if(CPSData[i]>max)
-                    max = CPSData[i];
-                if (CPSData[i] < min)
-                    min = CPSData[i];
-            }
-            double avg = (double)clickTime.Count/10d;
-            cpsDisplay.Text = String.Format("CPSInfo: Avg.:{0} Peak:{1} Valley:{2}", avg.ToString("00.0"), max.ToString("00.000"), min.ToString("00.000"));
         }
         private void clickButton_Click(object sender, EventArgs e)
         {
@@ -72,6 +84,7 @@ namespace CPSTest
         private void main_Load(object sender, EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;
+            chart.Show();
         }
 
         private void main_FormClosing(object sender, FormClosingEventArgs e)
