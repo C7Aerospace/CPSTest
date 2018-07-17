@@ -43,9 +43,9 @@
             this.sign.Location = new System.Drawing.Point(0, 0);
             this.sign.Margin = new System.Windows.Forms.Padding(0);
             this.sign.Name = "sign";
-            this.sign.Size = new System.Drawing.Size(267, 17);
+            this.sign.Size = new System.Drawing.Size(272, 17);
             this.sign.TabIndex = 0;
-            this.sign.Text = "CPS(Click Per Second)测试程式  ver 0.1 by C7";
+            this.sign.Text = "Click Per Second Test Program  ver 0.1 by C7";
             // 
             // cpsDisplay
             // 
@@ -55,9 +55,9 @@
             this.cpsDisplay.Location = new System.Drawing.Point(0, 17);
             this.cpsDisplay.Margin = new System.Windows.Forms.Padding(0);
             this.cpsDisplay.Name = "cpsDisplay";
-            this.cpsDisplay.Size = new System.Drawing.Size(114, 17);
+            this.cpsDisplay.Size = new System.Drawing.Size(102, 17);
             this.cpsDisplay.TabIndex = 1;
-            this.cpsDisplay.Text = "这里会显示CPS信息";
+            this.cpsDisplay.Text = "CPS Information";
             // 
             // beginButton
             // 
@@ -67,7 +67,7 @@
             this.beginButton.Name = "beginButton";
             this.beginButton.Size = new System.Drawing.Size(60, 36);
             this.beginButton.TabIndex = 2;
-            this.beginButton.Text = "开始";
+            this.beginButton.Text = "Start";
             this.beginButton.UseVisualStyleBackColor = true;
             this.beginButton.Click += new System.EventHandler(this.beginButton_Click);
             // 
@@ -86,7 +86,7 @@
             // 
             // ProgressBar
             // 
-            this.ProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.ProgressBar.Location = new System.Drawing.Point(0, 160);
             this.ProgressBar.Name = "ProgressBar";
             this.ProgressBar.Size = new System.Drawing.Size(284, 5);

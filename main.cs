@@ -47,7 +47,7 @@ namespace CPSTest
                     min = CPSData[i];
             }
             double avg = (double)clickTime.Count/10d;
-            cpsDisplay.Text = String.Format("CPS信息: 平均:{0} 峰值:{1} 谷值:{2}", avg.ToString("00.0"), max.ToString("00.00"), min.ToString("00.00"));
+            cpsDisplay.Text = String.Format("CPSInfo: Avg.:{0} Peak:{1} Valley:{2}", avg.ToString("00.0"), max.ToString("00.000"), min.ToString("00.000"));
         }
         private void clickButton_Click(object sender, EventArgs e)
         {
