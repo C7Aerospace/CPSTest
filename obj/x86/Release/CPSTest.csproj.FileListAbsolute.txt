@@ -1,0 +1,7 @@
+E:\0Pcode\CPSTest\CPSTest\bin\Release\CPSTest.exe
+E:\0Pcode\CPSTest\CPSTest\bin\Release\CPSTest.pdb
+E:\0Pcode\CPSTest\CPSTest\obj\x86\Release\CPSTest.main.resources
+E:\0Pcode\CPSTest\CPSTest\obj\x86\Release\CPSTest.Properties.Resources.resources
+E:\0Pcode\CPSTest\CPSTest\obj\x86\Release\CPSTest.csproj.GenerateResource.Cache
+E:\0Pcode\CPSTest\CPSTest\obj\x86\Release\CPSTest.exe
+E:\0Pcode\CPSTest\CPSTest\obj\x86\Release\CPSTest.pdb
