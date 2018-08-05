@@ -5,3 +5,13 @@ E:\0Pcode\CPSTest\CPSTest\obj\x86\Debug\CPSTest.Properties.Resources.resources
 E:\0Pcode\CPSTest\CPSTest\obj\x86\Debug\CPSTest.csproj.GenerateResource.Cache
 E:\0Pcode\CPSTest\CPSTest\obj\x86\Debug\CPSTest.exe
 E:\0Pcode\CPSTest\CPSTest\obj\x86\Debug\CPSTest.pdb
+E:\Github\CPSTest\bin\Debug\CPSTest.exe
+E:\Github\CPSTest\bin\Debug\CPSTest.pdb
+E:\Github\CPSTest\obj\x86\Debug\CPSTest.csprojAssemblyReference.cache
+E:\Github\CPSTest\obj\x86\Debug\CPSTest.Chart.resources
+E:\Github\CPSTest\obj\x86\Debug\CPSTest.main.resources
+E:\Github\CPSTest\obj\x86\Debug\CPSTest.Properties.Resources.resources
+E:\Github\CPSTest\obj\x86\Debug\CPSTest.csproj.GenerateResource.cache
+E:\Github\CPSTest\obj\x86\Debug\CPSTest.csproj.CoreCompileInputs.cache
+E:\Github\CPSTest\obj\x86\Debug\CPSTest.exe
+E:\Github\CPSTest\obj\x86\Debug\CPSTest.pdb

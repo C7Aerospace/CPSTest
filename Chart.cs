@@ -68,5 +68,22 @@ namespace CPSTest
         {
             g.Clear(Color.FromArgb(32, 32, 32));
         }
-    }
+
+		private void CloseForm(object sender, FormClosingEventArgs e)
+		{
+			e.Cancel = true;
+		}
+
+		private void Repaint(object sender, PaintEventArgs e)
+		{
+			try
+			{
+				draw();
+			}
+			catch(Exception)
+			{
+
+			}
+		}
+	}
 }

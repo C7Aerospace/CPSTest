@@ -13,7 +13,9 @@ namespace CPSTest
     {
         public List<DateTime> clickTime = new List<DateTime>();
         Thread thread1;
+		Thread thread2;
         Chart chart = new Chart();
+		int testTime = 10;
         public main()
         {
             InitializeComponent();
@@ -54,8 +56,8 @@ namespace CPSTest
                         min = CPSData[i];
                 }
 
-                double avg = (double)clickTime.Count / 10d;
-                cpsDisplay.Text = String.Format("CPSInfo: Avg.:{0} Peak:{1} Valley:{2}", avg.ToString("00.0"), max.ToString("00.000"), min.ToString("00.000"));
+                double avg = (double)clickTime.Count / (double)testTime;
+                cpsDisplay.Text = String.Format("CPSInfo: Avg.:{0} Peak:{1} Valley:{2}", avg.ToString("##.00"), max.ToString("##.00"), min.ToString("##.00"));
                 chart.clear();
                 chart.setArray(CPSData);
                 chart.draw();
@@ -68,15 +70,26 @@ namespace CPSTest
 
         private void beginButton_Click(object sender, EventArgs e)
         {
+			testTime = (int)TestTimeBox.Value;
+
             beginButton.Visible = false;
             clickButton.Visible = true;
+
+
+
             thread1 = new Thread(() => {
-                for (int i = 0; i < 50; i++)
-                {
-                    Thread.Sleep(200);
-                    ProgressBar.Width = (int)(284 * ((double)(i + 1) / (double)1000));
-                }
-                stop();
+				thread2 = new Thread(() =>
+				{
+					ProgressBar.Width = 0;
+					for (int i = 0; i < testTime; i++)
+					{
+						Thread.Sleep(1000);
+						ProgressBar.Width = (int)(384 * ((double)(i + 1) / (double)testTime));
+					}
+				});
+				thread2.Start();
+				Thread.Sleep(testTime*1000);
+				stop();
             });
             thread1.Start();
         }
