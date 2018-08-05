@@ -71,9 +71,9 @@ namespace CPSTest
             beginButton.Visible = false;
             clickButton.Visible = true;
             thread1 = new Thread(() => {
-                for (int i = 0; i < 1000; i++)
+                for (int i = 0; i < 50; i++)
                 {
-                    Thread.Sleep(10);
+                    Thread.Sleep(200);
                     ProgressBar.Width = (int)(284 * ((double)(i + 1) / (double)1000));
                 }
                 stop();
