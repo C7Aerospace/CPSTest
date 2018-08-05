@@ -103,14 +103,17 @@
 			// 
 			// TestTimeBox
 			// 
-			this.TestTimeBox.Location = new System.Drawing.Point(276, 18);
+			this.TestTimeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+			this.TestTimeBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.TestTimeBox.ForeColor = System.Drawing.Color.White;
+			this.TestTimeBox.Location = new System.Drawing.Point(276, 17);
 			this.TestTimeBox.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
 			this.TestTimeBox.Name = "TestTimeBox";
-			this.TestTimeBox.Size = new System.Drawing.Size(96, 23);
+			this.TestTimeBox.Size = new System.Drawing.Size(96, 19);
 			this.TestTimeBox.TabIndex = 6;
 			this.TestTimeBox.Value = new decimal(new int[] {
             10,
