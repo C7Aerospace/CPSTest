@@ -57,9 +57,10 @@ namespace CPSTest
                 }
 
                 double avg = (double)clickTime.Count / (double)testTime;
-                cpsDisplay.Text = String.Format("CPSInfo: Avg.:{0} Peak:{1} Valley:{2}", avg.ToString("##.00"), max.ToString("##.00"), min.ToString("##.00"));
+                cpsDisplay.Text = String.Format("CPS信息: 平均:{0} 峰值:{1} 谷值:{2}", avg.ToString("##.00"), max.ToString("##.00"), min.ToString("##.00"));
                 chart.clear();
                 chart.setArray(CPSData);
+				chart.setAvgCPS(avg);
                 chart.draw();
             }
         }

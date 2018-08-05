@@ -31,6 +31,7 @@
 			this.drawPanel = new System.Windows.Forms.Panel();
 			this.peakCPSLbl = new System.Windows.Forms.Label();
 			this.valleyCPSLbl = new System.Windows.Forms.Label();
+			this.avgCPSLbl = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// drawPanel
@@ -44,35 +45,44 @@
 			// 
 			// peakCPSLbl
 			// 
-			this.peakCPSLbl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
 			this.peakCPSLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(127)))), ((int)(((byte)(255)))));
 			this.peakCPSLbl.Location = new System.Drawing.Point(0, 2);
 			this.peakCPSLbl.Name = "peakCPSLbl";
 			this.peakCPSLbl.Size = new System.Drawing.Size(84, 17);
 			this.peakCPSLbl.TabIndex = 1;
-			this.peakCPSLbl.Text = "Peak:";
+			this.peakCPSLbl.Text = "峰值 :";
 			this.peakCPSLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// valleyCPSLbl
 			// 
-			this.valleyCPSLbl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
 			this.valleyCPSLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-			this.valleyCPSLbl.Location = new System.Drawing.Point(0, 19);
+			this.valleyCPSLbl.Location = new System.Drawing.Point(0, 36);
 			this.valleyCPSLbl.Name = "valleyCPSLbl";
 			this.valleyCPSLbl.Size = new System.Drawing.Size(84, 17);
 			this.valleyCPSLbl.TabIndex = 2;
-			this.valleyCPSLbl.Text = "Valley:";
+			this.valleyCPSLbl.Text = "谷值 :";
 			this.valleyCPSLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// avgCPSLbl
+			// 
+			this.avgCPSLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(255)))), ((int)(((byte)(63)))));
+			this.avgCPSLbl.Location = new System.Drawing.Point(0, 19);
+			this.avgCPSLbl.Name = "avgCPSLbl";
+			this.avgCPSLbl.Size = new System.Drawing.Size(84, 17);
+			this.avgCPSLbl.TabIndex = 3;
+			this.avgCPSLbl.Text = "平均 :";
+			this.avgCPSLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// Chart
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
 			this.ClientSize = new System.Drawing.Size(600, 196);
+			this.Controls.Add(this.avgCPSLbl);
 			this.Controls.Add(this.valleyCPSLbl);
 			this.Controls.Add(this.peakCPSLbl);
 			this.Controls.Add(this.drawPanel);
+			this.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.MaximumSize = new System.Drawing.Size(616, 235);
 			this.MinimumSize = new System.Drawing.Size(616, 235);
 			this.Name = "Chart";
@@ -88,5 +98,6 @@
         private System.Windows.Forms.Panel drawPanel;
         private System.Windows.Forms.Label peakCPSLbl;
         private System.Windows.Forms.Label valleyCPSLbl;
-    }
+		private System.Windows.Forms.Label avgCPSLbl;
+	}
 }

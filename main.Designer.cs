@@ -44,9 +44,9 @@
 			this.sign.Location = new System.Drawing.Point(0, 0);
 			this.sign.Margin = new System.Windows.Forms.Padding(0);
 			this.sign.Name = "sign";
-			this.sign.Size = new System.Drawing.Size(241, 15);
+			this.sign.Size = new System.Drawing.Size(220, 15);
 			this.sign.TabIndex = 0;
-			this.sign.Text = "Click Per Second Test Program  ver 0.3 by C7";
+			this.sign.Text = "Click Per Second 测试程式 ver 0.3 by C7";
 			// 
 			// cpsDisplay
 			// 
@@ -55,9 +55,9 @@
 			this.cpsDisplay.Location = new System.Drawing.Point(0, 17);
 			this.cpsDisplay.Margin = new System.Windows.Forms.Padding(0);
 			this.cpsDisplay.Name = "cpsDisplay";
-			this.cpsDisplay.Size = new System.Drawing.Size(94, 15);
+			this.cpsDisplay.Size = new System.Drawing.Size(148, 15);
 			this.cpsDisplay.TabIndex = 1;
-			this.cpsDisplay.Text = "CPS Information";
+			this.cpsDisplay.Text = "CPS 信息将会显示在这里";
 			// 
 			// beginButton
 			// 
@@ -97,9 +97,9 @@
 			this.Time.AutoSize = true;
 			this.Time.Location = new System.Drawing.Point(273, 0);
 			this.Time.Name = "Time";
-			this.Time.Size = new System.Drawing.Size(113, 15);
+			this.Time.Size = new System.Drawing.Size(89, 15);
 			this.Time.TabIndex = 5;
-			this.Time.Text = "Test Time (second) :";
+			this.Time.Text = "测试时间 (秒) :";
 			// 
 			// TestTimeBox
 			// 

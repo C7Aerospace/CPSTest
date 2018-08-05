@@ -11,9 +11,11 @@ namespace CPSTest
     public partial class Chart : Form
     {
         double[] CPSArray;
+		double AvgCPS;
         Graphics g;
         Pen PenRed;
         Pen PenBlue;
+		Pen PenGreen;
         public Chart()
         {
             InitializeComponent();
@@ -24,11 +26,16 @@ namespace CPSTest
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             PenRed = new Pen(Color.FromArgb(255,63,63), 1f);
             PenBlue = new Pen(Color.FromArgb(63,127,255), 1f);
+			PenGreen = new Pen(Color.FromArgb(63, 255, 63), 1f);
         }
         public void setArray(double[] CPSArray)
         {
             this.CPSArray = CPSArray;
         }
+		public void setAvgCPS(double CPS)
+		{
+			this.AvgCPS = CPS;
+		}
         public void draw()
         {
             double max = CPSArray[0];
@@ -57,12 +64,21 @@ namespace CPSTest
                 g.DrawLine(PenBlue, p1, p2);
                 if (i == minPos)
                 {
+					g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
                     g.DrawLine(PenRed, 0f, (float)(180f - (((float)CPSArray[i] / max) * 180f)), (float)((double)i * width), (float)(180f - (((float)CPSArray[i] / max) * 180f)));
-                }
+					g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+				}
             }
-            peakCPSLbl.Text = "Peak:" + max.ToString("00.000");
-            valleyCPSLbl.Text = "Valley:" + min.ToString("00.000");
-            valleyCPSLbl.Location = new Point(0, ((int)(180f - (((float)min / max) * 180f)) + 2));
+			g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
+			g.DrawLine(PenGreen, 0f, (float)(180f - (((float)AvgCPS / max) * 180f)), 500f, (float)(180f - (((float)AvgCPS / max) * 180f)));
+			g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+			peakCPSLbl.Text = "峰值 :" + max.ToString("##.00");
+			avgCPSLbl.Text = "平均 :" + AvgCPS.ToString("##.00");
+			valleyCPSLbl.Text = "谷值 :" + min.ToString("##.00");
+
+			avgCPSLbl.Location = new Point(0, ((int)(180f - (((float)AvgCPS / max) * 180f)) + 2));
+			valleyCPSLbl.Location = new Point(0, ((int)(180f - (((float)min / max) * 180f)) + 2));
         }
         public void clear()
         {
