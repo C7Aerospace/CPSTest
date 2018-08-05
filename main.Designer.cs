@@ -46,7 +46,7 @@
 			this.sign.Name = "sign";
 			this.sign.Size = new System.Drawing.Size(241, 15);
 			this.sign.TabIndex = 0;
-			this.sign.Text = "Click Per Second Test Program  ver 0.2 by C7";
+			this.sign.Text = "Click Per Second Test Program  ver 0.3 by C7";
 			// 
 			// cpsDisplay
 			// 
