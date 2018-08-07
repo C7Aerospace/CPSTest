@@ -56,8 +56,9 @@ namespace CPSTest
                         min = CPSData[i];
                 }
 
-                double avg = (double)clickTime.Count / (double)testTime;
-                cpsDisplay.Text = String.Format("CPS信息: 平均:{0} 峰值:{1} 谷值:{2}", avg.ToString("##.00"), max.ToString("##.00"), min.ToString("##.00"));
+                double avg = ((double)clickTime.Count - 1d) / (double)testTime;
+                cpsDisplay.Text = String.Format("CPS信息: 平均:{0} 峰值:{1} 谷值:{2}", avg.ToString("#0.0##"), max.ToString("#0.0##"), min.ToString("#0.0##"));
+				clicked.Text = String.Format("点击数 :{0}", clickTime.Count -1);
                 chart.clear();
                 chart.setArray(CPSData);
 				chart.setAvgCPS(avg);
@@ -67,7 +68,8 @@ namespace CPSTest
         private void clickButton_Click(object sender, EventArgs e)
         {
             clickTime.Add(DateTime.Now);
-        }
+			clicked.Text = String.Format("点击数 :{0}", clickTime.Count);
+		}
 
         private void beginButton_Click(object sender, EventArgs e)
         {
@@ -76,9 +78,9 @@ namespace CPSTest
             beginButton.Visible = false;
             clickButton.Visible = true;
 
+			clicked.Text = String.Format("点击数 :{0}", 0);
 
-
-            thread1 = new Thread(() => {
+			thread1 = new Thread(() => {
 				thread2 = new Thread(() =>
 				{
 					ProgressBar.Width = 0;

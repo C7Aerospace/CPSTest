@@ -73,9 +73,9 @@ namespace CPSTest
 			g.DrawLine(PenGreen, 0f, (float)(180f - (((float)AvgCPS / max) * 180f)), 500f, (float)(180f - (((float)AvgCPS / max) * 180f)));
 			g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
-			peakCPSLbl.Text = "峰值 :" + max.ToString("##.00");
-			avgCPSLbl.Text = "平均 :" + AvgCPS.ToString("##.00");
-			valleyCPSLbl.Text = "谷值 :" + min.ToString("##.00");
+			peakCPSLbl.Text = "峰值 :" + max.ToString("#0.0##");
+			avgCPSLbl.Text = "平均 :" + AvgCPS.ToString("#0.0##");
+			valleyCPSLbl.Text = "谷值 :" + min.ToString("#0.0##");
 
 			avgCPSLbl.Location = new Point(0, ((int)(180f - (((float)AvgCPS / max) * 180f)) + 2));
 			valleyCPSLbl.Location = new Point(0, ((int)(180f - (((float)min / max) * 180f)) + 2));

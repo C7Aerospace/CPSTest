@@ -33,8 +33,11 @@
 			this.beginButton = new System.Windows.Forms.Button();
 			this.clickButton = new System.Windows.Forms.Button();
 			this.ProgressBar = new System.Windows.Forms.Panel();
-			this.Time = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.TestTimeBox = new System.Windows.Forms.NumericUpDown();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.clicked = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.TestTimeBox)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -44,9 +47,9 @@
 			this.sign.Location = new System.Drawing.Point(0, 0);
 			this.sign.Margin = new System.Windows.Forms.Padding(0);
 			this.sign.Name = "sign";
-			this.sign.Size = new System.Drawing.Size(220, 15);
+			this.sign.Size = new System.Drawing.Size(229, 15);
 			this.sign.TabIndex = 0;
-			this.sign.Text = "Click Per Second 测试程式 ver 0.3 by C7";
+			this.sign.Text = "Click Per Second 测试程式 ver 0.3.5 by C7";
 			// 
 			// cpsDisplay
 			// 
@@ -63,7 +66,7 @@
 			// 
 			this.beginButton.Font = new System.Drawing.Font("Segoe UI", 14F);
 			this.beginButton.ForeColor = System.Drawing.Color.Black;
-			this.beginButton.Location = new System.Drawing.Point(162, 78);
+			this.beginButton.Location = new System.Drawing.Point(112, 78);
 			this.beginButton.Name = "beginButton";
 			this.beginButton.Size = new System.Drawing.Size(60, 36);
 			this.beginButton.TabIndex = 2;
@@ -77,7 +80,7 @@
 			this.clickButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
 			this.clickButton.Location = new System.Drawing.Point(12, 43);
 			this.clickButton.Name = "clickButton";
-			this.clickButton.Size = new System.Drawing.Size(360, 106);
+			this.clickButton.Size = new System.Drawing.Size(260, 106);
 			this.clickButton.TabIndex = 3;
 			this.clickButton.Text = "Click Me !!!";
 			this.clickButton.UseVisualStyleBackColor = true;
@@ -92,14 +95,14 @@
 			this.ProgressBar.Size = new System.Drawing.Size(384, 10);
 			this.ProgressBar.TabIndex = 4;
 			// 
-			// Time
+			// label2
 			// 
-			this.Time.AutoSize = true;
-			this.Time.Location = new System.Drawing.Point(273, 0);
-			this.Time.Name = "Time";
-			this.Time.Size = new System.Drawing.Size(89, 15);
-			this.Time.TabIndex = 5;
-			this.Time.Text = "测试时间 (秒) :";
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(273, 0);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(89, 15);
+			this.label2.TabIndex = 5;
+			this.label2.Text = "测试时间 (秒) :";
 			// 
 			// TestTimeBox
 			// 
@@ -121,13 +124,42 @@
             0,
             0});
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(273, 39);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(65, 15);
+			this.label1.TabIndex = 7;
+			this.label1.Text = "统计信息 :";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(273, 54);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(0, 15);
+			this.label3.TabIndex = 8;
+			// 
+			// clicked
+			// 
+			this.clicked.AutoSize = true;
+			this.clicked.Location = new System.Drawing.Point(283, 54);
+			this.clicked.Name = "clicked";
+			this.clicked.Size = new System.Drawing.Size(58, 15);
+			this.clicked.TabIndex = 9;
+			this.clicked.Text = "点击数 :0";
+			// 
 			// main
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
 			this.ClientSize = new System.Drawing.Size(384, 161);
+			this.Controls.Add(this.clicked);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.TestTimeBox);
-			this.Controls.Add(this.Time);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.beginButton);
 			this.Controls.Add(this.ProgressBar);
 			this.Controls.Add(this.clickButton);
@@ -154,8 +186,11 @@
         private System.Windows.Forms.Button beginButton;
         private System.Windows.Forms.Button clickButton;
         private System.Windows.Forms.Panel ProgressBar;
-		private System.Windows.Forms.Label Time;
+		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.NumericUpDown TestTimeBox;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label clicked;
 	}
 }
 

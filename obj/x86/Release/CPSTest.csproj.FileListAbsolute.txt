@@ -15,3 +15,4 @@ E:\Github\CPSTest\obj\x86\Release\CPSTest.csproj.GenerateResource.cache
 E:\Github\CPSTest\obj\x86\Release\CPSTest.csproj.CoreCompileInputs.cache
 E:\Github\CPSTest\obj\x86\Release\CPSTest.exe
 E:\Github\CPSTest\obj\x86\Release\CPSTest.pdb
+E:\Github\CPSTest\obj\x86\Release\CPSTest.csprojAssemblyReference.cache

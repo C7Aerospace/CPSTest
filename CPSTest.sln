@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPSTest", "CPSTest.csproj", "{083A75EF-D32D-4729-8143-110CC8280DFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{083A75EF-D32D-4729-8143-110CC8280DFC}.Debug|x86.ActiveCfg = Debug|x86
+		{083A75EF-D32D-4729-8143-110CC8280DFC}.Debug|x86.Build.0 = Debug|x86
+		{083A75EF-D32D-4729-8143-110CC8280DFC}.Release|x86.ActiveCfg = Release|x86
+		{083A75EF-D32D-4729-8143-110CC8280DFC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E561FEA9-B5C8-4F3E-9EFB-BDF451FAD42D}
+	EndGlobalSection
+EndGlobal
