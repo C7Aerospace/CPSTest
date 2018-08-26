@@ -50,7 +50,7 @@
 			this.peakCPSLbl.Name = "peakCPSLbl";
 			this.peakCPSLbl.Size = new System.Drawing.Size(84, 17);
 			this.peakCPSLbl.TabIndex = 1;
-			this.peakCPSLbl.Text = "峰值 :";
+			this.peakCPSLbl.Text = "Peak :";
 			this.peakCPSLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// valleyCPSLbl
@@ -60,7 +60,7 @@
 			this.valleyCPSLbl.Name = "valleyCPSLbl";
 			this.valleyCPSLbl.Size = new System.Drawing.Size(84, 17);
 			this.valleyCPSLbl.TabIndex = 2;
-			this.valleyCPSLbl.Text = "谷值 :";
+			this.valleyCPSLbl.Text = "Valley :";
 			this.valleyCPSLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// avgCPSLbl
@@ -70,7 +70,7 @@
 			this.avgCPSLbl.Name = "avgCPSLbl";
 			this.avgCPSLbl.Size = new System.Drawing.Size(84, 17);
 			this.avgCPSLbl.TabIndex = 3;
-			this.avgCPSLbl.Text = "平均 :";
+			this.avgCPSLbl.Text = "Average :";
 			this.avgCPSLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// Chart

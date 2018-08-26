@@ -35,7 +35,6 @@
 			this.ProgressBar = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
 			this.TestTimeBox = new System.Windows.Forms.NumericUpDown();
-			this.label1 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.clicked = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.TestTimeBox)).BeginInit();
@@ -47,9 +46,9 @@
 			this.sign.Location = new System.Drawing.Point(0, 0);
 			this.sign.Margin = new System.Windows.Forms.Padding(0);
 			this.sign.Name = "sign";
-			this.sign.Size = new System.Drawing.Size(229, 15);
+			this.sign.Size = new System.Drawing.Size(247, 15);
 			this.sign.TabIndex = 0;
-			this.sign.Text = "Click Per Second 测试程式 ver 0.3.5 by C7";
+			this.sign.Text = "Click Per Second Test Program ver 0.3.5 by C7";
 			// 
 			// cpsDisplay
 			// 
@@ -58,9 +57,9 @@
 			this.cpsDisplay.Location = new System.Drawing.Point(0, 17);
 			this.cpsDisplay.Margin = new System.Windows.Forms.Padding(0);
 			this.cpsDisplay.Name = "cpsDisplay";
-			this.cpsDisplay.Size = new System.Drawing.Size(148, 15);
+			this.cpsDisplay.Size = new System.Drawing.Size(49, 15);
 			this.cpsDisplay.TabIndex = 1;
-			this.cpsDisplay.Text = "CPS 信息将会显示在这里";
+			this.cpsDisplay.Text = "CPSInfo";
 			// 
 			// beginButton
 			// 
@@ -102,7 +101,7 @@
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(89, 15);
 			this.label2.TabIndex = 5;
-			this.label2.Text = "测试时间 (秒) :";
+			this.label2.Text = "Time (second) :";
 			// 
 			// TestTimeBox
 			// 
@@ -124,15 +123,6 @@
             0,
             0});
 			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(273, 39);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(65, 15);
-			this.label1.TabIndex = 7;
-			this.label1.Text = "统计信息 :";
-			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
@@ -144,11 +134,11 @@
 			// clicked
 			// 
 			this.clicked.AutoSize = true;
-			this.clicked.Location = new System.Drawing.Point(283, 54);
+			this.clicked.Location = new System.Drawing.Point(273, 39);
 			this.clicked.Name = "clicked";
-			this.clicked.Size = new System.Drawing.Size(58, 15);
+			this.clicked.Size = new System.Drawing.Size(56, 15);
 			this.clicked.TabIndex = 9;
-			this.clicked.Text = "点击数 :0";
+			this.clicked.Text = "clicked :0";
 			// 
 			// main
 			// 
@@ -157,7 +147,6 @@
 			this.ClientSize = new System.Drawing.Size(384, 161);
 			this.Controls.Add(this.clicked);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label1);
 			this.Controls.Add(this.TestTimeBox);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.beginButton);
@@ -188,7 +177,6 @@
         private System.Windows.Forms.Panel ProgressBar;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.NumericUpDown TestTimeBox;
-		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label clicked;
 	}
